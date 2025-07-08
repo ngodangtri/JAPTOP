@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell XPS 13 - Cửa hàng máy tính</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .thumbnail-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+            scrollbar-width: thin;
+        }
+        .thumbnail-container::-webkit-scrollbar {
+            height: 5px;
+        }
+        .thumbnail-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+        .thumbnail {
+            min-width: 100px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            transition: transform 0.2s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+            border-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Cửa hàng máy tính TechPro</h1>
+            <p>Nơi cung cấp các sản phẩm công nghệ chất lượng cao</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-detail">
+            <div class="product-images">
+                <img id="main-image" src="x2scrap1.png" alt="Dell XPS 13">
+                <div class="thumbnail-container">
+                    <img src="x2scrap1.png" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="x2scrap2.png" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="x2scrap3.png" class="thumbnail" onclick="changeMainImage(this)">
+                    <img src="x2scrap4.png" class="thumbnail" onclick="changeMainImage(this)">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h2>Dell XPS 13</h2>
+                <p class="price">25.000.000₫</p>
+                <p class="description">Dell XPS 13 là dòng laptop cao cấp với thiết kế mỏng nhẹ, hiệu năng mạnh mẽ phù hợp cho doanh nhân và người dùng chuyên nghiệp.</p>
+                
+                <div class="specs">
+                    <h3>Thông số kỹ thuật</h3>
+                    <ul>
+                        <li><strong>CPU:</strong> Intel Core i7-1165G7</li>
+                        <li><strong>RAM:</strong> 16GB DDR4</li>
+                        <li><strong>Ổ cứng:</strong> SSD 512GB NVMe</li>
+                        <li><strong>Màn hình:</strong> 13.4" FHD+ (1920 x 1200) IPS</li>
+                        <li><strong>Card đồ họa:</strong> Intel Iris Xe Graphics</li>
+                        <li><strong>Hệ điều hành:</strong> Windows 11 Pro</li>
+                        <li><strong>Pin:</strong> 52Whr, sử dụng đến 14 tiếng</li>
+                        <li><strong>Trọng lượng:</strong> 1.2 kg</li>
+                    </ul>
+                </div>
+                
+                <a href="https://zalo.me/0912271782" class="contact-btn" target="_blank">
+                    <img src="https://static.zalo.me/assets/social/zalo-share-icon.png" width="20" style="vertical-align: middle;">
+                    Liên hệ qua Zalo
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Cửa hàng máy tính TechPro. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeMainImage(element) {
+            document.getElementById('main-image').src = element.src;
+        }
+    </script>
+</body>
+</html>
